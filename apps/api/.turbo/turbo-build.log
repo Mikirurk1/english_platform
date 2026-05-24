@@ -1,8 +1,0 @@
-
-> @soenglish/api@0.0.0 build
-> npm run build -w @soenglish/email-templates && tsc -p tsconfig.app.json && tsc-alias -p tsconfig.app.json
-
-
-> @soenglish/email-templates@0.0.0 build
-> tsc -p tsconfig.lib.json
-

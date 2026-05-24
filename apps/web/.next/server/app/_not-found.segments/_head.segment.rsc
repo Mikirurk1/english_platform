@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[97367,["/_next/static/chunks/18e3b1369ad40bd2.js","/_next/static/chunks/e0c651abacd7c4c6.js","/_next/static/chunks/68b103c1af02f772.js","/_next/static/chunks/35f648547ef205f6.js","/_next/static/chunks/162549747c17c9b0.js"],"ViewportBoundary"]
-3:I[97367,["/_next/static/chunks/18e3b1369ad40bd2.js","/_next/static/chunks/e0c651abacd7c4c6.js","/_next/static/chunks/68b103c1af02f772.js","/_next/static/chunks/35f648547ef205f6.js","/_next/static/chunks/162549747c17c9b0.js"],"MetadataBoundary"]
-4:"$Sreact.suspense"
-0:{"buildId":"lxbMgqcXcorCGt-DGmtLJ","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"SoEnglish"}],["$","meta","1",{"name":"description","content":"SSR-first English learning platform"}]]}]}]}],null]}],"loading":null,"isPartial":false}

@@ -17,21 +17,13 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
-  projects: [
-    { name: 'setup', testMatch: /auth\.setup\.ts/ },
-    {
-      name: 'chromium',
-      testIgnore: /auth\.setup\.ts/,
-      use: { ...devices['Desktop Chrome'] },
-      dependencies: ['setup'],
-    },
-  ],
+  projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
   webServer: process.env.PLAYWRIGHT_SKIP_WEBSERVER
     ? undefined
     : {
-        command: 'npm run dev',
+        command: 'bash scripts/e2e-web-server.sh',
         url: baseURL,
         reuseExistingServer: !process.env.CI,
-        timeout: 120_000,
+        timeout: 180_000,
       },
 });

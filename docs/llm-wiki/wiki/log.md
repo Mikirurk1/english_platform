@@ -4,6 +4,11 @@ Append-only timeline. Prefix: `## [YYYY-MM-DD] <operation> | Title`
 
 ---
 
+## [2026-05-25] fix | E2E webServer — wait for API before tests
+- **Trigger:** Playwright CI — `ECONNREFUSED 127.0.0.1:3000` in `auth.setup.ts` (setup ran before API listened)
+- **Pages:** `concepts/testing.md`, `log.md`
+- **Notes:** `scripts/e2e-web-server.sh` waits for API + web + seeded login; removed `auth.setup.ts` project; `webServer` timeout 180s.
+
 ## [2026-05-25] fix | E2E — wait for API before browser tests
 - **Trigger:** Playwright CI — `Login failed with status 500` on first specs (`login`, `navigation`)
 - **Pages:** `concepts/testing.md`, `log.md`

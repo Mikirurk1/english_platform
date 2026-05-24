@@ -42,7 +42,7 @@ Bootstrap: [`tests/integration/bootstrap.ts`](../../../../tests/integration/boot
 - Page objects: [`tests/e2e/pages/`](../../../../tests/e2e/pages/) (`LoginPage`, `SidebarNav`, `ChatPage`, `CalendarPage`)
 - `SidebarNav` targets `navigation` with `aria-label="Main navigation"` only (dashboard quick actions can share link labels).
 - `LoginPage.login` waits for `POST /api/auth/login` and `/dashboard` redirect before assertions.
-- **Setup project** (`auth.setup.ts`): runs before browser tests — polls `GET /api` and `POST /api/auth/login` on `API_PROXY_TARGET` so the API is warm (Playwright `webServer` only waits for `:4200`).
+- **E2E dev server** (`scripts/e2e-web-server.sh`): Playwright `webServer` command — starts `npm run dev`, waits for `:3000/api` + `:4200`, verifies seeded login, then keeps dev running.
 - Route specs: [`tests/e2e/specs/pages/`](../../../../tests/e2e/specs/pages/) + legacy [`specs/login.spec.ts`](../../../../tests/e2e/specs/login.spec.ts), `navigation`, `product-pages`
 - Env: `PLAYWRIGHT_TEST_EMAIL`, `PLAYWRIGHT_TEST_PASSWORD`, `PLAYWRIGHT_TEACHER_EMAIL`, `PLAYWRIGHT_ADMIN_EMAIL`
 

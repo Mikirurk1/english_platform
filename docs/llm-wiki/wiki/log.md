@@ -4,6 +4,11 @@ Append-only timeline. Prefix: `## [YYYY-MM-DD] <operation> | Title`
 
 ---
 
+## [2026-05-25] fix | E2E — wait for API before browser tests
+- **Trigger:** Playwright CI — `Login failed with status 500` on first specs (`login`, `navigation`)
+- **Pages:** `concepts/testing.md`, `log.md`
+- **Notes:** `auth.setup.ts` project depends before `chromium`; polls API + login; `LoginPage` retries 5xx in CI.
+
 ## [2026-05-25] fix | GitHub Actions Node 24 + E2E artifact upload
 - **Trigger:** Playwright workflow — Node 20 action deprecation; git exit 128 on artifact upload
 - **Pages:** `concepts/testing.md`, `log.md`

@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-monorepo
         with:
           skip-prisma: 'false'
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-monorepo
       - run: npm run build:email-templates
       - run: npm run test:unit
@@ -60,7 +60,7 @@ jobs:
           --health-timeout 5s
           --health-retries 10
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-monorepo
       - run: npm run build:email-templates
       - run: npm run prisma:migrate:deploy
@@ -74,7 +74,7 @@ jobs:
     timeout-minutes: 25
     needs: [quality]
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-monorepo
       - run: npm run build:email-templates
       - run: npm run build:api

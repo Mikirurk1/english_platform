@@ -51,7 +51,7 @@ jobs:
           --health-timeout 5s
           --health-retries 10
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-monorepo
       - run: npm run build:email-templates
       - run: npm run prisma:migrate:deploy

@@ -1,5 +1,8 @@
+import path from 'node:path';
 import { defineConfig, devices } from '@playwright/test';
 
+/** Config lives in tests/e2e/ — webServer must run from repo root. */
+const repoRoot = path.resolve(__dirname, '../..');
 const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? 'http://localhost:4200';
 
 export default defineConfig({
@@ -22,6 +25,7 @@ export default defineConfig({
     ? undefined
     : {
         command: 'bash scripts/e2e-web-server.sh',
+        cwd: repoRoot,
         url: baseURL,
         reuseExistingServer: !process.env.CI,
         timeout: 180_000,

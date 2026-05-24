@@ -4,6 +4,11 @@ Append-only timeline. Prefix: `## [YYYY-MM-DD] <operation> | Title`
 
 ---
 
+## [2026-05-25] fix | E2E webServer cwd — script path from repo root
+- **Trigger:** Playwright CI exit 127 — `scripts/e2e-web-server.sh: No such file or directory`
+- **Pages:** `log.md`
+- **Notes:** Playwright `webServer.cwd` defaults to `tests/e2e/`; set `cwd` to repo root.
+
 ## [2026-05-25] fix | E2E webServer — wait for API before tests
 - **Trigger:** Playwright CI — `ECONNREFUSED 127.0.0.1:3000` in `auth.setup.ts` (setup ran before API listened)
 - **Pages:** `concepts/testing.md`, `log.md`
